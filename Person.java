@@ -1,19 +1,19 @@
-package baitap6;
+
+package BTStudent4;
 
 import java.util.Date;
 
-public abstract class Person implements Iperson {
+public abstract class Person implements IPerson {
+    String id;
+    String fullName;
+    Date dateOfBirth;
 
-    private String id;
-    private String fullname;
-    private Date dateOfBirth;
-
-    public Person(String id, String fullname, Date dateOfBirth) {
+    public Person(String id, String fullName, Date dateOfBirth) {
         this.id = id;
-        this.fullname = fullname;
+        this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
     }
-
+    
     public String getId() {
         return id;
     }
@@ -22,12 +22,12 @@ public abstract class Person implements Iperson {
         this.id = id;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public Date getDateOfBirth() {
@@ -38,8 +38,10 @@ public abstract class Person implements Iperson {
         this.dateOfBirth = dateOfBirth;
     }
 
-    // Phương thức trừu tượng yêu cầu các lớp con phải triển khai
+    @Override
+    public abstract void addPerson();
+    @Override
+    public abstract void updatePerson(String id);
     @Override
     public abstract void displayInfo();
-
 }
