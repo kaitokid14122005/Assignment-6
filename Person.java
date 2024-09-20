@@ -1,9 +1,16 @@
-package baitap6;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package student_ver.pkg3;
 
 import java.util.Date;
 
-public abstract class Person implements Iperson {
-
+/**
+ *
+ * @author bao
+ */
+abstract class Person implements Iperson{
     private String id;
     private String fullname;
     private Date dateOfBirth;
@@ -37,9 +44,6 @@ public abstract class Person implements Iperson {
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-
-    // Phương thức trừu tượng yêu cầu các lớp con phải triển khai
     @Override
-    public abstract void displayInfo();
-
+       public abstract void displayInfo();
 }
